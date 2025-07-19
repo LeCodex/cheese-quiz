@@ -1,0 +1,85 @@
+:root {
+    --color-geography: #304ffe;
+    --color-entertainment: #d500f9;
+    --color-history: #ffd600;
+    --color-arts: #5d4037;
+    --color-science: #00c853;
+    --color-sports: #ff6d00;
+}
+
+
+.title {
+    font-family: 'Lobster', cursive;
+    font-size: 550%;
+}
+
+.category {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(43,43,43,1) 100%);
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 350%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 12.5vh;
+    width: 12.5vh;
+}
+
+.side, .end, .mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-btn {
+    height: 90%;
+}
+
+
+@keyframes bob {
+    from { transform: rotate(15deg); }
+    to { transform: rotate(-15deg); }
+}
+
+.bob {
+    animation: bob 3s ease-in-out infinite alternate;
+}
+
+.bob-reverse {
+    animation: bob 3s ease-in-out infinite alternate-reverse;
+}
+
+
+@keyframes deplete {
+    from { width: 100% }
+    to { width: 0% }
+}
+
+.deplete {
+    animation: deplete 20s linear;
+}
+
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.spin {
+    animation: spin 1s cubic-bezier(.18,.89,.32,1.28);
+}
+
+
+@keyframes shake {
+    33% { transform: translate(-5%); }
+    67% { transform: translate(5%); }
+    100% { transform: translate(0%); }
+}
+
+.shake {
+    animation: shake .1s linear 2;
+}
